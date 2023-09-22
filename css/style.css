@@ -390,11 +390,23 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     font-weight: bold;
     margin: auto;
     width: 200px;
     margin-top: 10px;
+    padding: 0 10px;
+}
+
+.section_interest{
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    margin: auto;
+    width: 200px;
 }
 
 .section_location:hover {
