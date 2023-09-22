@@ -1,0 +1,119 @@
+body{
+    font-family: 'Inter Tight', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    color: royalblue;
+    font-size: 20px;
+    margin-top: 2rem;
+}
+
+/* Section Formulaire */
+.auth{
+    width: 65%;
+    max-width: 450px; 
+    margin: 6rem auto 2rem auto;
+    height: auto;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: white;
+    box-shadow: 0 0 8px #ccc;
+    padding-bottom: 20px;
+    transition: all 5s;
+    animation: slide 0.3s ease-in-out;
+}
+
+@keyframes slide {
+    0% {
+        transform: translatex(200%);
+    }
+    100% {
+        transform: translatex(0);
+    }
+}
+
+form{
+    background-color: royalblue;
+    border-radius: 10px;
+    width: 78%;
+    margin: auto auto 10px auto;
+    padding: 18px 0 13px 0;
+    box-shadow: 0 0 8px black;
+}
+
+.auth_control{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto auto 7px auto;
+    position: relative;
+}
+
+.auth_control > label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-bottom: 5px;
+    font-weight: 600;
+}
+
+.auth_control > input{
+    height: 33px;
+    border-radius: 5px;
+    border: #e5e6e8; 
+    background-color: #e5e6e8;
+    padding-left: 27px;
+}
+
+.auth_control ::placeholder {
+    color: #888;
+}
+
+/* Section buton */
+.button{
+    background-color: royalblue;
+    width: 140px;
+    height: 30px;
+    border-radius: 15px;
+    border: 2px solid white;
+    font-size: 1rem;
+    font-weight: 550;
+    margin: 15px auto;
+    color: white;
+    padding-top: 2px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.button:hover{
+    cursor: pointer;
+    border: none;
+    color: black;
+    box-shadow: 0 0 8px black;
+}
+
+.text:hover{
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+}
+
+/* Section se connecter */
+.section_connect:hover{
+    cursor: pointer;
+    color: #888;
+    font-weight: bold;
+}
+
+/* Media  */
+
+@media screen and (max-width: 580px) {
+    .auth{
+        width: 85%;
+        max-width: 450px; 
+    }
+}
