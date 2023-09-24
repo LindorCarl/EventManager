@@ -78,6 +78,7 @@ nav{
     text-decoration: none;
     color: royalblue;
     width: 40%;
+    font-size: 20px;
 }
 
 .nav_menu_text:hover{
@@ -129,6 +130,12 @@ nav{
 .nav_menu_img{
     border-radius: 50%;
     width: 70px;
+}
+
+.nav_menu_img:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    animation: mou 0.7s ease-in-out 0.05s 1 forwards;
 }
 
 /* Section Articles */
@@ -204,7 +211,6 @@ article{
     height: 250px;
     object-fit: cover;
     border-radius: 25px 0 0 25px;
-    
 }
 
 .article_content_text{
@@ -230,6 +236,11 @@ h4{
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+}
+
+.event > a{
+    text-decoration: none;
+    color: white;
 }
 
 .event_component{
@@ -260,8 +271,8 @@ h4{
 
 /* Section Footer */
 footer{
-    margin-top: 50px;
-    background-color: #d9d9d9;
+    margin-top: 40px;
+    background-color: #2e3e48;
     padding: 30px;
     display: flex;
     justify-content: space-between;
@@ -272,14 +283,14 @@ footer{
 
 .footer_link{
     text-decoration: none;
-    color: royalblue;
+    color: #979fa4;
 }
 
 .footer_link:hover{
     color: black;
 }
 
-/* Media Queries */
+/* =================================   Media Queries =================================== */
 @media screen and (max-width: 1230px) {
 
     body{
@@ -362,6 +373,17 @@ footer{
             display: block;
             text-align: center;
         }
+        .nav_menu_boxImg{
+            width: 100%;
+            margin: auto;
+        }
+    }
+
+    @media screen and (max-width: 340px) {
+
+        body{
+            margin: 2rem 1rem 0 1rem;
+        }
     }
 }
 
@@ -377,10 +399,16 @@ footer{
     text-align: center;
 }
 
+.card:hover{
+    cursor: pointer;
+    box-shadow: 1px 3px 8px 1px black;
+    transition: ease 0.3s;
+}
+
 .card_img{
     border-radius: 50%;
     width: 70px;
-    margin: auto;
+    margin: auto; 
 }
 
 .section_location{
@@ -393,9 +421,10 @@ footer{
     gap: 10px;
     font-weight: bold;
     margin: auto;
-    width: 200px;
-    margin-top: 10px;
-    padding: 0 10px;
+    width: 180px;
+    margin-top: 15px; 
+    padding: 0 10px; 
+    box-shadow: 1px 3px 8px 1px black;
 }
 
 .section_interest{
@@ -405,12 +434,48 @@ footer{
     align-items: center;
     gap: 10px;
     font-weight: bold;
-    margin: auto;
+    margin: 30px auto 5px auto;
     width: 200px;
+    height: 20px;
 }
 
-.section_location:hover {
+.section_interest > p{
+    font-size: 18px;
+}
+
+.about > p{
+    font-size: 1.17em;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.about_delete:hover, .about_notice:hover, .section_location:hover {
     cursor: pointer;
     opacity: 0.8;
     animation: mou 0.7s ease-in-out 0.05s 1 forwards;
+}
+
+.about_notice{
+    background-color: green;
+    color: white;
+    border-radius: 20px;
+    gap: 10px;
+    font-weight: bold;
+    width: 300px;
+    padding: 10px; 
+    box-shadow: 1px 3px 8px 1px black;
+    font-size: 18px;
+}
+
+.about_delete{
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    gap: 10px;
+    font-weight: bold;
+    width: 250px;
+    padding: 10px; 
+    box-shadow: 1px 3px 8px 1px black;
+    font-size: 18px;
+    margin-top: 10px;
 }
