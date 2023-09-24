@@ -139,11 +139,6 @@ nav{
 }
 
 /* Section Articles */
-a{
-    text-decoration: none;
-    color: black;
-}
-
 article{
     background-color: #d9d9d9;
     border-radius: 25px;
@@ -157,18 +152,67 @@ article{
 .article_subtitle{
     margin: 0;
     font-style: italic;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .article_component{
-    width: 20%;
-    text-align: center;
+    width: 95%;
     background-color: white;
     border-radius: 20px;
-    padding: 10px 0;
+    padding: 30px;
+    margin: auto;
 }
 
 .article_component:hover {
+    cursor: pointer;
+    box-shadow: 1px 3px 8px black;
+}
+
+.article_component_img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.text_bold{
+    font-weight: 600;
+}
+
+.text_italic{
+    font-style: italic;
+}
+
+.text_justify{
+    text-align: justify;
+}
+
+.tag{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    width: 90%;
+    gap: 10px;
+}
+
+.tag-event{
+    background-color: royalblue;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    width: auto;
+    margin: 10px 0 0 0; 
+    padding: 0 10px; 
+    box-shadow: 1px 3px 8px 1px black;
+}
+
+.tag-event:hover{
     cursor: pointer;
     opacity: 0.8;
     animation: mou 0.7s ease-in-out 0.05s 1 forwards;
@@ -187,96 +231,53 @@ article{
     100% {
       transform: scale3d(0.98, 0.98, 1);
     }
-  }
-
-.article_component_img {
-    width: 70px;
 }
 
-.article_content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    height: 250px;
-    border-radius: 30px;
-    padding: 10px;
+/* Section Infos */
+.infos{
     margin-top: 15px;
-    box-shadow: 1px 3px 8px #e2e2e2;
 }
 
-.article_content:hover{
+.infos_text:hover, a:hover{
+    color: royalblue;
+    font-weight: bold;
     cursor: pointer;
-    box-shadow: 1px 3px 8px 1px black;
-    transition: ease 0.3s;
 }
 
-.article_content_img{
-    width: 57%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 25px 0 0 25px;
-}
-
-.article_content_text{
-    width: 45%;
-    height: 250px;
-    background-color: white;
-    border-radius: 0 25px 25px 0;
-    padding: 0 30px;
-}
-
-h4{
-    font-style: italic;
-}
-
-.article_content_text > p{
-    font-weight: 600;
-    color: #9D9797;
-}
-
-/* Section Section Découvrir des événements ou créer un groupe */
-.event{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-}
-
-.event > a{
+a{
     text-decoration: none;
-    color: white;
 }
 
-.event_component{
+.infos_button{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    background-color: royalblue;
-    padding: 5px 17px;
-    border-radius: 50px;
 }
 
-.event_component:hover {
+.button{
+    background-color: #e32359;
+    width: 140px;
+    height: 30px;
+    border-radius: 15px;
+    border: 2px solid white;
+    font-size: 1rem;
+    font-weight: 550;
+    color: white;
+    padding-top: 3px;
+}
+
+.button:hover{
     cursor: pointer;
+    border: none;
+    color: black;
+    box-shadow: 0 0 8px black;
     opacity: 0.8;
     animation: mou 0.7s ease-in-out 0.05s 1 forwards;
 }
 
-.event_component > i {
-    color: white;
-    font-size: 30px;
-}
-
-.event_component > P {
-    color: white;
-    font-size: 18px;
-}
-
 /* Section Footer */
 footer{
-    margin-top: 40px;
+    margin-top: 30px;
     background-color: #2e3e48;
     padding: 30px;
     display: flex;
@@ -326,20 +327,6 @@ footer{
         border-radius: 25px 25px 0 0;
     }
     
-    .article_content_text{
-        width: 100%;
-        height: auto;
-        padding: 0;
-    }
-
-    /* Section événements ou groupe */
-    .event{
-        display: block;
-    }
-
-    .event_component{
-        margin-bottom: 10px;
-    }
 
     /* FOOTER */
     footer{
@@ -347,28 +334,13 @@ footer{
         text-align: center;
     }
 
-    @media screen and (max-width: 850px) {
-
-        article{
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .article_component{
-            width: 50%;
-            margin: 10px auto;
-        }
-        
-    }
-
     @media screen and (max-width: 700px) {
 
         body{
             margin: 2rem 2rem 0 2rem;
+        }
+        .infos_button{
+            display: block;
         }
     }
 
@@ -390,97 +362,4 @@ footer{
             margin: 2rem 1rem 0 1rem;
         }
     }
-}
-
-
-/* ===============================    CSS PROFILE.HTML        ===============================*/
-
-/* Section Section Informations du profil */
-.card{
-    background-color: #d9d9d9;
-    border-radius: 25px;
-    padding: 25px;
-    height: auto;
-    text-align: center;
-}
-
-.card:hover{
-    cursor: pointer;
-    box-shadow: 1px 3px 8px 1px black;
-    transition: ease 0.3s;
-}
-
-.card_img{
-    border-radius: 50%;
-    width: 70px;
-    margin: auto; 
-}
-
-.section_location{
-    background-color: royalblue;
-    color: white;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    font-weight: bold;
-    margin: auto;
-    width: 180px;
-    margin-top: 15px; 
-    padding: 0 10px; 
-    box-shadow: 1px 3px 8px 1px black;
-}
-
-.section_interest{
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    font-weight: bold;
-    margin: 30px auto 5px auto;
-    width: 200px;
-    height: 20px;
-}
-
-.section_interest > p{
-    font-size: 18px;
-}
-
-.about > p{
-    font-size: 1.17em;
-    margin-bottom: 0;
-    font-weight: 600;
-}
-
-.about_delete:hover, .about_notice:hover, .section_location:hover {
-    cursor: pointer;
-    opacity: 0.8;
-    animation: mou 0.7s ease-in-out 0.05s 1 forwards;
-}
-
-.about_notice{
-    background-color: green;
-    color: white;
-    border-radius: 20px;
-    gap: 10px;
-    font-weight: bold;
-    width: 300px;
-    padding: 10px; 
-    box-shadow: 1px 3px 8px 1px black;
-    font-size: 18px;
-}
-
-.about_delete{
-    background-color: red;
-    color: white;
-    border-radius: 20px;
-    gap: 10px;
-    font-weight: bold;
-    width: 250px;
-    padding: 10px; 
-    box-shadow: 1px 3px 8px 1px black;
-    font-size: 18px;
-    margin-top: 10px;
 }
